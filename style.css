@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&display=swap');
+@import url('reset.css');
+/*Общие стили*/
+a{color: #51ACFF;}
+a:active {opacity: 0.5; transition-duration: 0.5s;}
+body {font-family: 'Noto Sans', sans-serif; background-color: #0C1014;}
+/*Голова сайта*/
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    background-color: #313131;
+}
+.logo {width: 35px; height: 35px;}
+/*Основной контент*/
+main{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 70px 45px;
+    color: white;
+    gap: 100px;
+}
+.title{
+    width: 1200px;
+    font-weight: 700;
+    text-align: center;
+    font-size: 110px;
+}
+main .link {font-size: 50px; font-weight: 700;}
+.point {width: 30px; height: 30px;}
+.i-mac-img {width: 1300px; height: 1020px;}
+.description {
+    display: flex;
+    justify-content: space-between;
+    width: 1200px;
+    height: auto;
+}
+.block {
+    display: flex;
+    flex-direction: column;
+    width: 245px;
+    height: 263px;
+    gap: 34.5px;
+    font-weight: bolder;
+    border: 7px solid #EDBB99;
+    border-top: 0; border-left: 0; border-right: 0;
+}
+.up-to, .desc {font-size: 25px;}
+.cifra {font-size: 70px; font-family: Verdana, Geneva, Tahoma, sans-serif;}
+/*Подвал*/
+.footer-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #313131;
+    padding: 40px 0;
+    gap: 25px;
+}
+.socials {display: inline-flex; width: 150px; gap: 25px;}
+.textcontent {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    color: #7D7D7D;
+    width: 1000px;
+    font-weight: 700;
+}
+/*Медиа запросы*/
+/*Для мониторов и ноутбуков*/
+@media (min-width: 993px) and (max-width: 1350px) {
+    .title {
+        width: 980px;
+        font-size: 90px;
+    }
+    .i-mac-img {width: 900px; height: 720px;}
+    .description {max-width: 900px;}
+    .textcontent {width: 935px;}
+}
+/*Для планшетов и мини ПК*/
+@media (min-width: 768px) and (max-width: 992px) {
+    .title {
+        width: 730px;
+        font-size: 70px;
+    }
+    main .link {font-size: 35px;}
+    .point {width: 20px; height: 20px;}
+    .i-mac-img {width: 700px; height: 520px;}
+    .description {width: 713px;}
+    .block {max-width: 200px;}
+    .textcontent {width: 720px; font-size: 18px;}
+    .socials .logo {width: 25px; height: 25px;}
+}
+/*Для смартфонов*/
+@media (min-width: 535px) and (max-width: 767px) {
+    .title {
+        width: 514px;
+        font-size: 45px;
+    }
+    main .link {font-size: 25px;}
+    .point {width: 15px; height: 15px;}
+    .i-mac-img {width: 450px; height: 350px;}
+    .description {width: 500px;}
+    .block {width: 145px; height: 245px;}
+    .textcontent {width: 512px; font-size: 13.5px;}
+    
+    .socials .logo {width: 24.5px; height: 24.5px;}
+}
+/*Меняем значение при минимальных и максимальных ширинах*/
+@media (min-width: 658px) and (max-width: 767px) {
+    .i-mac-img {width: 600px; height: 500px;}
+    .description {max-width: 625px;}
+}
+@media (max-width: 767px) {
+    .up-to, .desc {font-size: 22px;}
+    .socials {justify-content: space-between; gap: 0;}
+}
+/*меньше 534 пикселей*/
+@media (max-width: 534px) {
+    .title {
+        max-width: 414px;
+        font-size: 35px;
+    }
+    main .link {font-size: 20px;}
+    .point {width: 10px; height: 10px;}
+    .i-mac-img {width: 450px; height: 350px;}
+    .description {max-width: 450px;}
+    .block {width: 125px; height: 225px;}
+    .up-to, .desc {font-size: 17px;}
+    .textcontent {width: 450px; font-size: 11.5px;}
+}
